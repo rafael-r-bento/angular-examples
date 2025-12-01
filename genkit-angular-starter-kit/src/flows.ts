@@ -6,14 +6,15 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 import { Chat, genkit, Session } from 'genkit/beta';
-import { googleAI, gemini20Flash } from '@genkit-ai/googleai';
+import { openAI } from "genkitx-openai";
+import { gpt4o } from "genkitx-openai";
 import { parse } from 'partial-json';
 import { z } from 'zod';
 
-const model = gemini20Flash;
+const model = gpt4o;
 
 const ai = genkit({
-  plugins: [googleAI()],
+  plugins: [openAI()],
   model
 });
   
@@ -23,6 +24,7 @@ const getDateTime = ai.defineTool(
   {
     name: 'getDateTime',
     description: 'Gets the current date and time',
+    inputSchema: z.object({}),
     outputSchema: z.string(),
   },
   async (input) => {

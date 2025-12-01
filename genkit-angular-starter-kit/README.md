@@ -16,11 +16,11 @@ In order to run this example, make sure that your development environment meets 
 * Node.js v20+
 * npm
 
-This example will use the Gemini API which provides a generous free tier and does not require a credit card to get started.
-To use the Gemini API, you'll need an API key. If you don't already have one, create a key in Google AI Studio.
+This example will use the OpenAI API.
+To use the OpenAI API, you'll need an API key. If you don't already have one, create a key in OpenAI Platform.
 
-1. [Get an API key from Google AI Studio](https://makersuite.google.com/app/apikey)
-1. After you’ve created an API key, set the `GEMINI_API_KEY` environment variable to your key with the command `export GEMINI_API_KEY=<your API key>`
+1. [Get an API key from OpenAI Platform](https://platform.openai.com), register your credit card and add credit to your account.
+1. After you’ve created an API key, set the `OPENAI_API_KEY` environment variable to your key with the command `export OPENAI_API_KEY=<your API key>`
 1. Clone this repository or download the code to your local machine
 1. `cd` into the root folder (e.g., `cd genkit-angular-starter-kit`)
 1. Install the dependencies with `npm install`
@@ -33,7 +33,7 @@ This application uses [server-side rendering](https://angular.dev/guide/ssr) and
 how to add integrate [Genkit flows](https://firebase.google.com/docs/genkit/flows) into the
 Node.js Express server Angular uses to render content.
 
-The flow is defined in  `src/flows.ts`. Our flow, named `chatFlow` demonstrates how to use
+The flow is defined in `src/flows.ts`. Our flow, named `chatFlow` demonstrates how to use
 [persistent chat sessions](https://firebase.google.com/docs/genkit/chat) to return a response from
 the agent, as well as several options the user can choose from, if applicable. This application also
 demonstrates how to use of [Genkit tools](https://firebase.google.com/docs/genkit/tool-calling).
