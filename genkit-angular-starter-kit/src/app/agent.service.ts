@@ -46,10 +46,10 @@ export class AgentService {
 
   agentResource = resource({
     defaultValue: { agentResponse: '', options: [] },
-    request: () => this.userInput(),
-    loader: ({request}): Promise<AgentResponse> => {
+    params: () => this.userInput(),
+    loader: ({params}): Promise<AgentResponse> => {
       return runFlow({ url: ENDPOINT, input: {
-        userInput: request,
+        userInput: params,
         sessionId: this.sessionId(),
         clearSession: this.clearSession()
       }});
