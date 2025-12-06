@@ -6,8 +6,7 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 import { Chat, genkit, Session } from 'genkit/beta';
-import { openAI } from "genkitx-openai";
-import { gpt4o } from "genkitx-openai";
+import { openAI, gpt4o } from "genkitx-openai";
 import { parse } from 'partial-json';
 import { z } from 'zod';
 

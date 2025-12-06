@@ -21,7 +21,7 @@
                 <h4>Here are some options:</h4>
                 <div>
                     @for (option of options; track $index) {
-                        <button (click)="userInput = option">{{option}}</button>
+                        <button matButton="outlined" (click)="userInput = option">{{option}}</button>
                     }
                 </div>
             </div>
@@ -40,9 +40,11 @@
         }
     </div>
     <div class="input-container">
-        <input #userInputEl [(ngModel)]="userInput" (keydown.enter)="onSubmit()" />
-        <button (click)="onSubmit()" [disabled]="agentService.agentResource.isLoading() || userInput === ''">
-            <mat-icon aria-hidden="false" aria-label="send icon" fontIcon="send"></mat-icon>
-        </button>
+      <mat-form-field class="input-field">
+        <input matInput type="text" #userInputEl [(ngModel)]="userInput" (keydown.enter)="onSubmit()" />
+      </mat-form-field>
+      <button class="input-send" matRaisedButton (click)="onSubmit()" [disabled]="agentService.agentResource.isLoading() || userInput === ''">
+        <mat-icon aria-hidden="false" aria-label="send icon" fontIcon="send"></mat-icon>
+      </button>
     </div>
 </div>

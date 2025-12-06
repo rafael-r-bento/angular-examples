@@ -11,6 +11,7 @@ body {
   font-family: "Source Sans 3", serif;
   height: 100%;
   background-color: rgb(234, 244, 247);
+  margin: 0;
 
   @include mat.theme((
     color: (

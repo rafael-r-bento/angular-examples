@@ -6,14 +6,25 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 import { Component, inject } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { AgentService } from '../agent.service';
 
 @Component({
   selector: 'app-agent-chat',
-  imports: [MatIconModule, FormsModule, MatProgressBarModule],
+  standalone: true,
+  imports: [
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatProgressBarModule
+  ],
   templateUrl: './agent-chat.component.html',
   styleUrl: './agent-chat.component.scss'
 })
