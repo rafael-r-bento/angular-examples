@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 import { Chat, genkit, Session } from 'genkit/beta';
-import { openAI, gpt4o } from "genkitx-openai";
+import { anthropic } from "@genkit-ai/anthropic";
 import { parse } from 'partial-json';
 import { z } from 'zod';
 
-const model = gpt4o;
+const model = anthropic.model('claude-sonnet-4-5');
 
 const ai = genkit({
-  plugins: [openAI()],
+  plugins: [anthropic()],
   model
 });
   
