@@ -16,11 +16,15 @@ In order to run this example, make sure that your development environment meets 
 * Node.js v20+
 * npm
 
-This example will use the OpenAI API.
-To use the OpenAI API, you'll need an API key. If you don't already have one, create a key in OpenAI Platform.
+This example will use the Anthropic API.
+To use the Anthropic API, you'll need an API key. If you don't already have one, create a key in Claude Platform.
 
-1. [Get an API key from OpenAI Platform](https://platform.openai.com), register your credit card and add credit to your account.
-1. After you’ve created an API key, set the `OPENAI_API_KEY` environment variable to your key with the command `export OPENAI_API_KEY=<your API key>`
+1. [Get an API key from Claude Platform](https://platform.claude.com), register your credit card and add credit to your account.
+1. After you’ve created an API key, set the `ANTHROPIC_API_KEY` environment variable to your key.
+   **~/.bash_profile**
+   ```env
+   export ANTHROPIC_API_KEY="your-API-key"
+   ```
 1. Clone this repository or download the code to your local machine
 1. `cd` into the root folder (e.g., `cd genkit-angular-starter-kit`)
 1. Install the dependencies with `npm install`
