@@ -16,16 +16,10 @@ In order to run this example, make sure that your development environment meets 
 * Node.js v20+
 * npm
 
-This example will use the Anthropic API.
-To use the Anthropic API, you'll need an API key. If you don't already have one, create a key in Claude Platform.
-
-1. [Get an API key from Claude Platform](https://platform.claude.com), register your credit card and add credit to your account.
-1. After you’ve created an API key, set the `ANTHROPIC_API_KEY` environment variable to your key.
-
-   **~/.bash_profile**
-   ```env
-   export ANTHROPIC_API_KEY="your-API-key"
-   ```
+This example will use the Ollama plugin with `gemma:latest` model.
+To use the Ollama plugin, you'll need to install and run the Ollama server.
+Detailed instructions can be found in [Download Ollama](https://ollama.com/download)
+and [Ollama plugin | Genkit](https://genkit.dev/docs/js/integrations/ollama).
 
 1. Clone this repository or download the code to your local machine
 1. `cd` into the root folder (e.g., `cd genkit-angular-starter-kit`)

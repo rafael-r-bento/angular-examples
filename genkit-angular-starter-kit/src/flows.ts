@@ -6,15 +6,22 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 import { Chat, genkit, Session } from 'genkit/beta';
-import { anthropic } from "@genkit-ai/anthropic";
+import { ollama } from 'genkitx-ollama';
 import { parse } from 'partial-json';
 import { z } from 'zod';
 
-const model = anthropic.model('claude-sonnet-4-5');
-
 const ai = genkit({
-  plugins: [anthropic()],
-  model
+  plugins: [
+    ollama({
+      models: [
+        {
+          name: 'gemma:latest',
+          type: 'chat',
+        },
+      ],
+      serverAddress: 'http://127.0.0.1:11434',
+    })
+  ],
 });
   
 let session: Session;
@@ -71,7 +78,7 @@ export const chatFlow = ai.defineFlow(
         session = ai.createSession({ sessionId });
         await session.updateMessages(sessionId, []);
     }
-    chat = session.chat({ sessionId, model, tools: [getDateTime] });
+    chat = session.chat({ sessionId, model: 'ollama/gemma:latest' });
     const prompt = `
     You're a general purpose assistant that can respond to a variety of user queries.
 
