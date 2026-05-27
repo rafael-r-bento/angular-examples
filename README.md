@@ -1,7 +1,7 @@
 ## Angular Examples
 
 ### AI Examples
-* [Vertex AI in Firebase with Angular Starter Kit](./vertex-ai-firebase-angular-example)
+* [Firabase AI Logic with Angular Starter Kit](./firebase-ai-logic-angular-example)
 * [Genkit with Angular Starter Kit](./genkit-angular-starter-kit/)
 * [Genkit + Angular Interactive Graphic Novel Builder](./genkit-angular-story-generator/)
 

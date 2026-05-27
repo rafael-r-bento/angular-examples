@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", monospace;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+}
+
+@layer base {
+  :root {
+    --primary: #9d4300;
+    --on-primary: #ffffff;
+    --primary-container: #ffdbca;
+    --on-primary-container: #341100;
+    --secondary: #bb0112;
+    --on-secondary: #ffffff;
+    --secondary-container: #ffdad6;
+    --on-secondary-container: #410002;
+    --tertiary: #715a3f;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #fcdeb5;
+    --on-tertiary-container: #271901;
+    --error: #ba1a1a;
+    --on-error: #ffffff;
+    --error-container: #ffdad6;
+    --on-error-container: #410002;
+    --background: #fdf8f5;
+    --on-background: #1a110d;
+    --surface: #fdf8f5;
+    --on-surface: #1a110d;
+    --surface-variant: #e6deda;
+    --on-surface-variant: #48464a;
+    --outline: #79747e;
+    --outline-variant: #cac4d0;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f5f0ec;
+    --surface-container: #efeae7;
+    --surface-container-high: #e9e4e1;
+    --surface-container-highest: #e3dedb;
+  }
+
+  .dark {
+    --primary: #ffb690;
+    --on-primary: #552100;
+    --primary-container: #2d0e00;
+    --on-primary-container: #d45d00;
+    --secondary: #ffb4ab;
+    --on-secondary: #690005;
+    --secondary-container: #bb0112;
+    --on-secondary-container: #ffc8c1;
+    --tertiary: #dec29a;
+    --on-tertiary: #3e2d11;
+    --tertiary-container: #231500;
+    --on-tertiary-container: #957d5a;
+    --error: #ffb4ab;
+    --on-error: #690005;
+    --error-container: #93000a;
+    --on-error-container: #ffdad6;
+    --background: #0b1326;
+    --on-background: #dae2fd;
+    --surface: #0b1326;
+    --on-surface: #dae2fd;
+    --surface-variant: #2d3449;
+    --on-surface-variant: #c6c6cd;
+    --outline: #909097;
+    --outline-variant: #45464d;
+    --surface-container-lowest: #060e20;
+    --surface-container-low: #131b2e;
+    --surface-container: #171f33;
+    --surface-container-high: #222a3d;
+    --surface-container-highest: #2d3449;
+  }
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@layer utilities {
+}
